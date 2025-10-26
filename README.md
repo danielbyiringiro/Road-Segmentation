@@ -59,27 +59,7 @@ pip install torch torchvision torchmetrics matplotlib numpy jupyter
 
 3. Download the KITTI Road Segmentation dataset:
 
-**Note**: You'll need Kaggle API credentials to download the dataset. First, get your API token:
-- Go to [Kaggle Account Settings](https://www.kaggle.com/settings/account)
-- Scroll to "API" section and click "Create New API Token"
-- This downloads a `kaggle.json` file
-
-Set up your Kaggle API credentials:
-```bash
-# Place your kaggle.json in ~/.kaggle/
-mkdir -p ~/.kaggle
-cp ~/Downloads/kaggle.json ~/.kaggle/  # Adjust path to where you downloaded it
-chmod 600 ~/.kaggle/kaggle.json
-```
-
-Then download the dataset:
-```bash
-pip install kaggle
-kaggle datasets download -d sakshaymahna/kittiroadsegmentation
-unzip kittiroadsegmentation.zip
-```
-
-Alternatively, download manually from [Kaggle](https://www.kaggle.com/datasets/sakshaymahna/kittiroadsegmentation) and extract to the project directory.
+The command is part of the notebook cells.
 
 ## Usage
 
