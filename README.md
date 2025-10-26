@@ -29,12 +29,13 @@ The dataset is split as follows:
 
 ## Requirements
 
-- Python 3.x
-- PyTorch
-- torchvision
+- Python 3.8+
+- PyTorch >= 1.10.0
+- torchvision >= 0.11.0
 - torchmetrics
 - matplotlib
 - numpy
+- jupyter (for running the notebook)
 
 ## Installation
 
@@ -46,14 +47,34 @@ cd Road-Segmentation
 
 2. Install the required dependencies:
 ```bash
-pip install torch torchvision torchmetrics matplotlib numpy
+pip install torch torchvision torchmetrics matplotlib numpy jupyter
+```
+
+Or create a virtual environment and install dependencies:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install torch torchvision torchmetrics matplotlib numpy jupyter
 ```
 
 3. Download the KITTI Road Segmentation dataset:
+
+**Note**: You'll need Kaggle API credentials to download the dataset. Set up your Kaggle API token first:
 ```bash
-curl -L -o kittiroadsegmentation.zip https://www.kaggle.com/api/v1/datasets/download/sakshaymahna/kittiroadsegmentation
+# Place your kaggle.json in ~/.kaggle/
+mkdir -p ~/.kaggle
+cp /path/to/kaggle.json ~/.kaggle/
+chmod 600 ~/.kaggle/kaggle.json
+```
+
+Then download the dataset:
+```bash
+pip install kaggle
+kaggle datasets download -d sakshaymahna/kittiroadsegmentation
 unzip kittiroadsegmentation.zip
 ```
+
+Alternatively, download manually from [Kaggle](https://www.kaggle.com/datasets/sakshaymahna/kittiroadsegmentation) and extract to the project directory.
 
 ## Usage
 
