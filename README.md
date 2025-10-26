@@ -53,17 +53,22 @@ pip install torch torchvision torchmetrics matplotlib numpy jupyter
 Or create a virtual environment and install dependencies:
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate.bat
 pip install torch torchvision torchmetrics matplotlib numpy jupyter
 ```
 
 3. Download the KITTI Road Segmentation dataset:
 
-**Note**: You'll need Kaggle API credentials to download the dataset. Set up your Kaggle API token first:
+**Note**: You'll need Kaggle API credentials to download the dataset. First, get your API token:
+- Go to [Kaggle Account Settings](https://www.kaggle.com/settings/account)
+- Scroll to "API" section and click "Create New API Token"
+- This downloads a `kaggle.json` file
+
+Set up your Kaggle API credentials:
 ```bash
 # Place your kaggle.json in ~/.kaggle/
 mkdir -p ~/.kaggle
-cp /path/to/kaggle.json ~/.kaggle/
+cp ~/Downloads/kaggle.json ~/.kaggle/  # Adjust path to where you downloaded it
 chmod 600 ~/.kaggle/kaggle.json
 ```
 
