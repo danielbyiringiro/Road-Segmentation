@@ -53,7 +53,7 @@ pip install torch torchvision torchmetrics matplotlib numpy jupyter
 Or create a virtual environment and install dependencies:
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate.bat
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install torch torchvision torchmetrics matplotlib numpy jupyter
 ```
 
